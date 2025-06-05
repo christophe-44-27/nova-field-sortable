@@ -1,13 +1,15 @@
 {
     "name": "christophe-44-27/nova-field-sortable",
-    "description": "A Laravel Nova field.",
+    "description": "A Laravel Nova field to easily sort records in your tables.",
     "keywords": [
         "laravel",
-        "nova"
+        "nova",
+        "sortable",
+        "field"
     ],
     "license": "MIT",
     "require": {
-        "php": ">=8.3",
+        "php": "^8.1 || ^8.2 || ^8.3",
         "laravel/nova": "^5.0",
         "spatie/eloquent-sortable": "^4.5"
     },
@@ -24,8 +26,12 @@
         }
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": false,
+            "php-http/discovery": false
+        }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
 }
